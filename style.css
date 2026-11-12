@@ -8,10 +8,24 @@
     scroll-behavior: smooth;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
 body {
     background-color: #fff7e8;
     color: #17120f;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ACCESIBILIDAD: FOCO DEL TECLADO */
+
+a:focus-visible {
+    outline: 3px solid #790e15;
+    outline-offset: 5px;
+    border-radius: 5px;
 }
 
 /* MENÚ */
@@ -20,16 +34,18 @@ body {
     margin: 30px auto;
     width: 85%;
     border: 2px solid #17120f;
-    padding: 10px;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
 .bienvenida {
     color: #17120f;
     text-decoration: none;
     font-size: 17px;
+    font-weight: bold;
 }
 
 .estrella {
@@ -40,43 +56,47 @@ body {
 
 .menu nav {
     display: flex;
-    gap: 25px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .menu nav a {
     text-decoration: none;
     color: #17120f;
-    padding: 8px 14px;
+    padding: 10px 14px;
     border-radius: 20px;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .menu nav a:hover,
 .menu nav .activo {
     background-color: #bd9991;
+    color: #17120f;
 }
 
 /* PORTADA */
 
 .portada {
-    height: 430px;
+    min-height: 430px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    padding: 25px 15px;
 }
 
 .foto-portada {
     width: 310px;
     height: 310px;
+    max-width: 85%;
     position: relative;
     z-index: 1;
 }
 
 .foto-portada img {
-    width: 110%;
-    height: 110%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     filter: none;
     background: transparent;
@@ -84,16 +104,18 @@ body {
 
 .portada h1 {
     color: #780f16;
-    font-size: 95px;
+    font-size: clamp(55px, 9vw, 95px);
     font-weight: bold;
     z-index: 2;
     margin-top: -25px;
+    line-height: 1.2;
 }
 
 .profesion {
     color: #4a1717;
     font-family: monospace;
     font-size: 15px;
+    text-align: center;
 }
 
 .decoracion {
@@ -103,6 +125,7 @@ body {
     display: flex;
     gap: 180px;
     top: 180px;
+    pointer-events: none;
 }
 
 /* SOBRE MÍ */
@@ -121,6 +144,7 @@ body {
 
 .descripcion h2 {
     font-size: 25px;
+    line-height: 1.4;
 }
 
 .descripcion h2 span {
@@ -135,7 +159,7 @@ body {
 }
 
 .descripcion p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.9;
     margin-bottom: 20px;
 }
@@ -166,6 +190,7 @@ body {
     border-radius: 50%;
     padding: 15px;
     font-size: 19px;
+    color: #17120f;
 }
 
 /* PROYECTOS DESTACADOS */
@@ -196,11 +221,11 @@ body {
     height: 230px;
     object-fit: cover;
     border: 2px solid #17120f;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .galeria-mini img:hover {
-    transform: translateY(-10px) rotate(-2deg);
+    transform: translateY(-8px) rotate(-2deg);
 }
 
 /* BOTÓN VER MÁS */
@@ -215,12 +240,12 @@ body {
     padding: 12px 45px;
     font-size: 20px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .boton:hover {
     background: #790e15;
-    color: white;
+    color: #ffffff;
     transform: scale(1.05);
 }
 
@@ -257,7 +282,7 @@ body {
     border: 2px solid #17120f;
     text-decoration: none;
     color: #17120f;
-    transition: 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .proyecto:hover {
@@ -269,6 +294,7 @@ body {
     width: 120px;
     height: 100px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .proyecto h3 {
@@ -293,24 +319,45 @@ footer {
 .redes {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .redes a {
     text-decoration: none;
-    color: #790e15;
+    color: #17120f;
     background: #bd9991;
-    padding: 9px 15px;
+    padding: 10px 15px;
     border-radius: 20px;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .redes a:hover {
     background: #790e15;
-    color: white;
+    color: #ffffff;
 }
 
 .copyright {
     font-size: 13px;
+}
+
+/* ADAPTACIÓN A TABLETAS */
+
+@media (max-width: 900px) {
+
+    .sobre-mi {
+        padding: 70px 8%;
+        gap: 35px;
+    }
+
+    .galeria-mini img {
+        width: 30%;
+    }
+
+    .destacados,
+    .proyectos {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
 }
 
 /* ADAPTACIÓN A CELULARES */
@@ -321,24 +368,46 @@ footer {
         width: 95%;
         flex-direction: column;
         gap: 15px;
+        padding: 15px 10px;
     }
 
     .menu nav {
+        justify-content: center;
         gap: 5px;
     }
 
     .menu nav a {
-        font-size: 13px;
-        padding: 7px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .portada {
+        min-height: 380px;
+    }
+
+    .foto-portada {
+        width: 260px;
+        height: 260px;
     }
 
     .portada h1 {
-        font-size: 70px;
+        font-size: 65px;
+    }
+
+    .decoracion {
+        gap: 100px;
+        font-size: 35px;
     }
 
     .sobre-mi {
         padding: 50px 8%;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .descripcion {
+        max-width: 100%;
     }
 
     .software {
@@ -358,14 +427,79 @@ footer {
         padding: 50px 6%;
     }
 
+    .proyecto {
+        gap: 15px;
+    }
+
     .proyecto img {
         width: 90px;
         height: 90px;
     }
 
     footer {
+        width: 95%;
         flex-direction: column;
         text-align: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+}
+
+/* ADAPTACIÓN A PANTALLAS MUY PEQUEÑAS */
+
+@media (max-width: 400px) {
+
+    .menu nav {
+        gap: 0;
+    }
+
+    .menu nav a {
+        font-size: 12px;
+        padding: 9px 7px;
+    }
+
+    .portada h1 {
+        font-size: 55px;
+    }
+
+    .decoracion {
+        gap: 65px;
+    }
+
+    .galeria-mini img {
+        width: 100%;
+        height: 190px;
+    }
+
+    .proyecto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .proyecto img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .boton {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+}
+
+/* RESPETO POR MOVIMIENTO REDUCIDO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 
 }
