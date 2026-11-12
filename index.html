@@ -1,160 +1,347 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portafolio de Karol Andrea, diseñadora gráfica. Conoce su perfil, herramientas de diseño y proyectos creativos.">
+
     <title>Karol Andrea | Portafolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- ENLACE PARA SALTAR AL CONTENIDO -->
+
+    <a href="#contenido-principal" class="saltar-contenido">
+        Saltar al contenido principal
+    </a>
+
+
     <!-- MENÚ -->
+
     <header class="menu" id="inicio">
-        <a href="#inicio" class="bienvenida">
-            <span class="estrella">★</span>
+
+        <a href="#inicio" class="bienvenida"
+           aria-label="Portafolio de Karol Andrea, ir al inicio">
+
+            <span class="estrella" aria-hidden="true">★</span>
+
             Bienvenidos
+
         </a>
 
-        <nav>
-            <a href="#inicio" class="activo">Inicio.</a>
-            <a href="#sobre-mi">Sobre mí.</a>
-            <a href="#proyectos">Proyectos.</a>
+        <nav aria-label="Navegación principal">
+
+            <a href="#inicio" class="activo" aria-current="page">
+                Inicio.
+            </a>
+
+            <a href="#sobre-mi">
+                Sobre mí.
+            </a>
+
+            <a href="#proyectos">
+                Proyectos.
+            </a>
+
         </nav>
+
     </header>
 
-    <!-- PORTADA -->
-    <section class="portada">
 
-        <div class="decoracion">
-            <span>★</span>
-            <span>✦</span>
-            <span>★</span>
-        </div>
+    <!-- CONTENIDO PRINCIPAL -->
 
-        <div class="foto-portada">
-    <img src="karol.png" alt="Fotografía de Karol">
-</div>
+    <main id="contenido-principal">
 
-        <h1>Karol</h1>
-        <p class="profesion">Diseñadora Gráfica</p>
 
-    </section>
+        <!-- PORTADA -->
 
-    <!-- SOBRE MÍ -->
-    <section class="sobre-mi" id="sobre-mi">
+        <section class="portada" aria-labelledby="titulo-portada">
 
-        <div class="descripcion">
+            <div class="decoracion" aria-hidden="true">
 
-            <h2>Hola, soy <span>Karol Andrea</span></h2>
-            <p class="edad">y tengo 21 años...</p>
+                <span>★</span>
 
-            <p>
-                Estudio Diseño Gráfico, y me apasiona asumir
-                nuevos retos, explorar ideas y aprender
-                constantemente.
-            </p>
+                <span>✦</span>
 
-            <p>
-                Me interesa la comunicación visual y la creación
-                de propuestas gráficas con conceptos claros y
-                bien definidos, que logren conectar con el público
-                a través de una combinación entre estética y
-                funcionalidad.
-            </p>
+                <span>★</span>
 
-        </div>
-
-        <div class="software">
-            <h2>Software</h2>
-
-            <div class="programas">
-                <span>AI</span>
-                <span>PS</span>
-                <span>C</span>
-                <span>Id</span>
             </div>
-        </div>
 
-    </section>
+            <div class="foto-portada">
 
-    <!-- PROYECTOS DESTACADOS -->
-    <section class="destacados">
+                <img
+                    src="karol.png"
+                    alt="Fotografía de Karol Andrea">
 
-        <h2>Proyectos</h2>
+            </div>
 
-        <div class="galeria-mini">
+            <h1 id="titulo-portada">Karol</h1>
 
-            <img src="carrusel.jpg" alt="Carrusel">
-            <img src="estampado.jpg" alt="Estampado">
-            <img src="rediseno.jpg" alt="Rediseño">
+            <p class="profesion">Diseñadora Gráfica</p>
 
-        </div>
+        </section>
 
-        <a href="#proyectos" class="boton">Ver más</a>
 
-    </section>
+        <!-- SOBRE MÍ -->
 
-    <!-- PROYECTOS COMPLETOS -->
-    <section class="proyectos" id="proyectos">
+        <section
+            class="sobre-mi"
+            id="sobre-mi"
+            aria-labelledby="titulo-sobre-mi">
 
-        <h2>Mis proyectos</h2>
-        <p class="subtitulo">Una muestra de mis trabajos creativos.</p>
+            <div class="descripcion">
 
-        <div class="lista-proyectos">
+                <h2 id="titulo-sobre-mi">
+                    Hola, soy <span>Karol Andrea</span>
+                </h2>
 
-            <a href="carrusel.jpg" target="_blank" class="proyecto">
-                <img src="carrusel.jpg" alt="Proyecto carrusel">
-                <div>
-                    <h3>Carrusel</h3>
-                    <p>Diseño y comunicación visual.</p>
+                <p class="edad">
+                    y tengo 21 años...
+                </p>
+
+                <p>
+                    Estudio Diseño Gráfico, y me apasiona asumir
+                    nuevos retos, explorar ideas y aprender
+                    constantemente.
+                </p>
+
+                <p>
+                    Me interesa la comunicación visual y la creación
+                    de propuestas gráficas con conceptos claros y
+                    bien definidos, que logren conectar con el público
+                    a través de una combinación entre estética y
+                    funcionalidad.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRAMAS DE DISEÑO -->
+
+            <div class="software">
+
+                <h2>Software</h2>
+
+                <div class="programas" aria-label="Programas de diseño">
+
+                    <span title="Adobe Illustrator">AI</span>
+
+                    <span title="Adobe Photoshop">PS</span>
+
+                    <span title="Canva">C</span>
+
+                    <span title="Adobe InDesign">Id</span>
+
                 </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS DESTACADOS -->
+
+        <section
+            class="destacados"
+            aria-labelledby="titulo-destacados">
+
+            <h2 id="titulo-destacados">Proyectos</h2>
+
+            <div class="galeria-mini">
+
+                <img
+                    src="carrusel.jpg"
+                    alt="Vista previa del proyecto de diseño de carrusel">
+
+                <img
+                    src="estampado.jpg"
+                    alt="Vista previa del proyecto de estampado">
+
+                <img
+                    src="rediseno.jpg"
+                    alt="Vista previa del proyecto de rediseño">
+
+            </div>
+
+            <a href="#proyectos"
+               class="boton"
+               aria-label="Ver todos los proyectos de Karol Andrea">
+
+                Ver más
+
             </a>
 
-            <a href="estampado.jpg" target="_blank" class="proyecto">
-                <img src="estampado.jpg" alt="Proyecto estampado">
-                <div>
-                    <h3>Estampado</h3>
-                    <p>Diseño de estampados.</p>
-                </div>
-            </a>
+        </section>
 
-            <a href="rediseno.jpg" target="_blank" class="proyecto">
-                <img src="rediseno.jpg" alt="Proyecto rediseño">
-                <div>
-                    <h3>Rediseño</h3>
-                    <p>Exploración de nuevas propuestas gráficas.</p>
-                </div>
-            </a>
 
-            <a href="infografia.jpg" target="_blank" class="proyecto">
-                <img src="infografia.jpg" alt="Proyecto infografía">
-                <div>
-                    <h3>Infografía</h3>
-                    <p>Diseño de información visual.</p>
-                </div>
-            </a>
+        <!-- PROYECTOS COMPLETOS -->
 
-        </div>
+        <section
+            class="proyectos"
+            id="proyectos"
+            aria-labelledby="titulo-proyectos">
 
-    </section>
+            <h2 id="titulo-proyectos">Mis proyectos</h2>
+
+            <p class="subtitulo">
+                Una muestra de mis trabajos creativos.
+            </p>
+
+            <div class="lista-proyectos">
+
+
+                <!-- PROYECTO 1 -->
+
+                <a
+                    href="carrusel.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="proyecto"
+                    aria-label="Abrir imagen del proyecto Carrusel en una nueva pestaña">
+
+                    <img
+                        src="carrusel.jpg"
+                        alt="Diseño gráfico de un carrusel">
+
+                    <div>
+
+                        <h3>Carrusel</h3>
+
+                        <p>Diseño y comunicación visual.</p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PROYECTO 2 -->
+
+                <a
+                    href="estampado.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="proyecto"
+                    aria-label="Abrir imagen del proyecto Estampado en una nueva pestaña">
+
+                    <img
+                        src="estampado.jpg"
+                        alt="Diseño de estampado">
+
+                    <div>
+
+                        <h3>Estampado</h3>
+
+                        <p>Diseño de estampados.</p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PROYECTO 3 -->
+
+                <a
+                    href="rediseno.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="proyecto"
+                    aria-label="Abrir imagen del proyecto Rediseño en una nueva pestaña">
+
+                    <img
+                        src="rediseno.jpg"
+                        alt="Propuesta gráfica de rediseño">
+
+                    <div>
+
+                        <h3>Rediseño</h3>
+
+                        <p>
+                            Exploración de nuevas propuestas gráficas.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PROYECTO 4 -->
+
+                <a
+                    href="infografia.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="proyecto"
+                    aria-label="Abrir imagen del proyecto Infografía en una nueva pestaña">
+
+                    <img
+                        src="infografia.jpg"
+                        alt="Diseño de una infografía">
+
+                    <div>
+
+                        <h3>Infografía</h3>
+
+                        <p>Diseño de información visual.</p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
 
     <!-- PIE DE PÁGINA -->
-    <footer>
 
-        <p>Gracias por visitar mi portafolio ❤️</p>
+    <footer aria-label="Información de contacto y redes sociales">
+
+        <p>
+            Gracias por visitar mi portafolio ❤️
+        </p>
 
         <div class="redes">
-            <a href="mailto:andreacarvajal301@gmail.com">✉ Correo</a>
-            <a href="https://www.instagram.com/k_andrea_7128?srtk=MWpxYXRydXBqdDBrNg%3D%3D&utm_source=qr" target="_blank">
-                ◎ Instagram
+
+            <a
+                href="mailto:andreacarvajal301@gmail.com"
+                aria-label="Enviar un correo electrónico a Karol Andrea">
+
+                <span aria-hidden="true">✉</span>
+
+                Correo
+
             </a>
+
+            <a
+                href="https://www.instagram.com/k_andrea_7128?srtk=MWpxYXRydXBqdDBrNg%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar Instagram de Karol Andrea en una nueva pestaña">
+
+                <span aria-hidden="true">◎</span>
+
+                Instagram
+
+            </a>
+
         </div>
 
-        <p class="copyright">© Año 2026</p>
+        <p class="copyright">
+            © 2026
+        </p>
 
     </footer>
 
+
 </body>
+
 </html>
